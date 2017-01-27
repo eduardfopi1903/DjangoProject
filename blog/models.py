@@ -16,7 +16,7 @@ class Post(models.Model):
 	tags = models.ManyToManyField(
 		Tag, related_name='blog_posts')
 	startups = models.ManyToManyField(
-			Startup, related_name='blog_post')
+			Startup, related_name='blog_posts')
 
 	def __unicode__(self):
 		return "{} on {}".format(

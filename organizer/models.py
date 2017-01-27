@@ -6,7 +6,7 @@ class Tag(models.Model):
 	name = models.CharField(
 		max_length=31, unique = True)
 	slug = models.SlugField(
-		Max_length=31,
+		max_length=31,
 		unique=True,
 		help_text='A label for URL config.')
 	def __unicode__(self):
@@ -15,7 +15,7 @@ class Tag(models.Model):
 		ordering = ['name']
 
 class Startup(models.Model):
-	name = models.CharFiel(
+	name = models.CharField(
 		max_length=31, db_index=True)
 	slug = models.SlugField(
 		max_length=31,
@@ -36,7 +36,7 @@ class Startup(models.Model):
 class NewsLink(models.Model):
 	title = models.CharField(max_length=63)
 	pub_date = models.DateField('date published')
-	link = models.URLField(max_lentgh=255)
+	link = models.URLField(max_length=255)
 	startup = models.ForeignKey(Startup)
 
 	def __unicode__(self):
