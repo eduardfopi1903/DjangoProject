@@ -21,7 +21,7 @@ class Startup(models.Model):
 		max_length=31,
 		unique=True,
 		help_text='A label for URL config.')
-	description = models.TextField()
+	description = models.TextField(blank=True)
 	founded_date = models.DateField(
 		'date founded')
 	contact = models.EmailField()

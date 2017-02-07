@@ -12,7 +12,7 @@
       <dt>Date Founded</dt>
         <dd>{{ startup.founded_date|date:"d/m/Y" }}</dd>
       <dt>Website</dt>
-        <dd>{ startup.website|urlize }}</dd>
+	  <dd>{{ startup.website|urlize }}</dd>
       <dt>Contact</dt>
         <dd>{{ startup.contact }}</dd>
       <dt>Tag{{ startup.tags.count|pluralize }}</dt>

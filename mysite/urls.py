@@ -1,9 +1,9 @@
-from django.conf.urls import include, url
+from django.conf.urls import include, url, patterns
 from django.contrib import admin
 
-from organizer.views import homepage
 
 urlpatterns = [
-url(r'^admin/', admin.site.urls),
-url(r'^$', homepage),
+    url(r'^admin/', admin.site.urls),
+    url(r'^blog/', include('blog.urls')),
+    url(r'^', include('organizer.urls')),
 ]
